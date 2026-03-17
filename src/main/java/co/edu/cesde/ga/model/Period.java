@@ -1,8 +1,8 @@
 package co.edu.cesde.ga.model;
 
 public class Period {
-    private String periodId;
-    private String code;
+    private int id;
+    private String name;
     private String startDate;
     private String endDate;
 

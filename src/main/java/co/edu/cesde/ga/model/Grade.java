@@ -1,16 +1,16 @@
 package co.edu.cesde.ga.model;
 
 public class Grade {
-    private String gradeId;
-    private String groupSubjectId;
-    private String studentId;
-    private Double finalScore;
+    private Long gradeId;
+    private Long groupSubjectId;
+    private Long studentId;
+    private int finalScore;
     private String observation;
 
     public Grade() {
     }
 
-    public Grade(String gradeId, String groupSubjectId, String studentId, Double finalScore, String observation) {
+    public Grade(Long gradeId, Long groupSubjectId, Long studentId, int finalScore, String observation) {
         this.gradeId = gradeId;
         this.groupSubjectId = groupSubjectId;
         this.studentId = studentId;
@@ -18,35 +18,35 @@ public class Grade {
         this.observation = observation;
     }
 
-    public String getGradeId() {
+    public Long getGradeId() {
         return gradeId;
     }
 
-    public void setGradeId(String gradeId) {
+    public void setGradeId(Long gradeId) {
         this.gradeId = gradeId;
     }
 
-    public String getGroupSubjectId() {
+    public Long getGroupSubjectId() {
         return groupSubjectId;
     }
 
-    public void setGroupSubjectId(String groupSubjectId) {
+    public void setGroupSubjectId(Long groupSubjectId) {
         this.groupSubjectId = groupSubjectId;
     }
 
-    public String getStudentId() {
+    public Long getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
+    public void setStudentId(Long studentId) {
         this.studentId = studentId;
     }
 
-    public Double getFinalScore() {
+    public int getFinalScore() {
         return finalScore;
     }
 
-    public void setFinalScore(Double finalScore) {
+    public void setFinalScore(int finalScore) {
         this.finalScore = finalScore;
     }
 

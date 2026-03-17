@@ -1,50 +1,50 @@
 package co.edu.cesde.ga.model;
 
 public class GroupSubject {
-    private String groupSubjectId;
-    private String groupId;
-    private String subjectId;
-    private String teacherId;
+    private Long groupSubjectId;
+    private Long groupId;
+    private Long subjectId;
+    private Long teacherId;
 
     public GroupSubject() {
     }
 
-    public GroupSubject(String groupSubjectId, String groupId, String subjectId, String teacherId) {
+    public GroupSubject(Long groupSubjectId, Long groupId, Long subjectId, Long teacherId) {
         this.groupSubjectId = groupSubjectId;
         this.groupId = groupId;
         this.subjectId = subjectId;
         this.teacherId = teacherId;
     }
 
-    public String getGroupSubjectId() {
+    public Long getGroupSubjectId() {
         return groupSubjectId;
     }
 
-    public void setGroupSubjectId(String groupSubjectId) {
+    public void setGroupSubjectId(Long groupSubjectId) {
         this.groupSubjectId = groupSubjectId;
     }
 
-    public String getGroupId() {
+    public Long getGroupId() {
         return groupId;
     }
 
-    public void setGroupId(String groupId) {
+    public void setGroupId(Long groupId) {
         this.groupId = groupId;
     }
 
-    public String getSubjectId() {
+    public Long getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(String subjectId) {
+    public void setSubjectId(Long subjectId) {
         this.subjectId = subjectId;
     }
 
-    public String getTeacherId() {
+    public Long getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(String teacherId) {
+    public void setTeacherId(Long teacherId) {
         this.teacherId = teacherId;
     }
 

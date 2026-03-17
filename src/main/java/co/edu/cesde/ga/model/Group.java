@@ -1,16 +1,13 @@
 package co.edu.cesde.ga.model;
 
 public class Group {
-    private String groupId;
+    private int groupId;
     private String code;
-    private String programId;
-    private String periodId;
+    private int programId;
+    private int periodId;
     private String shift;
 
-    public Group() {
-    }
-
-    public Group(String groupId, String code, String programId, String periodId, String shift) {
+    public Group(int groupId, String code, int programId, int periodId, String shift) {
         this.groupId = groupId;
         this.code = code;
         this.programId = programId;
@@ -18,11 +15,11 @@ public class Group {
         this.shift = shift;
     }
 
-    public String getGroupId() {
+    public int getGroupId() {
         return groupId;
     }
 
-    public void setGroupId(String groupId) {
+    public void setGroupId(int groupId) {
         this.groupId = groupId;
     }
 
@@ -34,19 +31,19 @@ public class Group {
         this.code = code;
     }
 
-    public String getProgramId() {
+    public int getProgramId() {
         return programId;
     }
 
-    public void setProgramId(String programId) {
+    public void setProgramId(int programId) {
         this.programId = programId;
     }
 
-    public String getPeriodId() {
+    public int getPeriodId() {
         return periodId;
     }
 
-    public void setPeriodId(String periodId) {
+    public void setPeriodId(int periodId) {
         this.periodId = periodId;
     }
 

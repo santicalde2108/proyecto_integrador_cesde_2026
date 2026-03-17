@@ -1,17 +1,19 @@
 package co.edu.cesde.ga.model;
 
+import java.time.LocalDateTime;
+
 public class Enrollment {
-    private String enrollmentId;
-    private String studentId;
-    private String groupId;
-    private String periodId;
+    private Long enrollmentId;
+    private Long studentId;
+    private Long groupId;
+    private Long periodId;
     private String status;
-    private String enrolledAt;
+    private LocalDateTime enrolledAt;
 
     public Enrollment() {
     }
 
-    public Enrollment(String enrollmentId, String studentId, String groupId, String periodId, String status, String enrolledAt) {
+    public Enrollment(Long enrollmentId, Long studentId, Long groupId, Long periodId, String status, LocalDateTime enrolledAt) {
         this.enrollmentId = enrollmentId;
         this.studentId = studentId;
         this.groupId = groupId;
@@ -20,35 +22,35 @@ public class Enrollment {
         this.enrolledAt = enrolledAt;
     }
 
-    public String getEnrollmentId() {
+    public Long getEnrollmentId() {
         return enrollmentId;
     }
 
-    public void setEnrollmentId(String enrollmentId) {
+    public void setEnrollmentId(Long enrollmentId) {
         this.enrollmentId = enrollmentId;
     }
 
-    public String getStudentId() {
+    public Long getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
+    public void setStudentId(Long studentId) {
         this.studentId = studentId;
     }
 
-    public String getGroupId() {
+    public Long getGroupId() {
         return groupId;
     }
 
-    public void setGroupId(String groupId) {
+    public void setGroupId(Long groupId) {
         this.groupId = groupId;
     }
 
-    public String getPeriodId() {
+    public Long getPeriodId() {
         return periodId;
     }
 
-    public void setPeriodId(String periodId) {
+    public void setPeriodId(Long periodId) {
         this.periodId = periodId;
     }
 
@@ -60,11 +62,11 @@ public class Enrollment {
         this.status = status;
     }
 
-    public String getEnrolledAt() {
+    public LocalDateTime getEnrolledAt() {
         return enrolledAt;
     }
 
-    public void setEnrolledAt(String enrolledAt) {
+    public void setEnrolledAt(LocalDateTime enrolledAt) {
         this.enrolledAt = enrolledAt;
     }
 

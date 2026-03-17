@@ -1,6 +1,6 @@
 package co.edu.cesde.ga.app;
 
-import co.edu.cesde.ga.model.Person;
+import co.edu.cesde.ga.model.;
 import co.edu.cesde.ga.model.Student;
 import co.edu.cesde.ga.model.Teacher;
 
