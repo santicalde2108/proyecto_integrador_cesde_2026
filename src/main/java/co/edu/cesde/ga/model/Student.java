@@ -4,9 +4,11 @@ public class Student extends Person {
     private String birthDate;
 
     public Student() {
+        super();
     }
-    public Student(Long userId, String code, String documentNumber, String firstName, String lastName, String status, String birthDate) {
-        super(userId, code, documentNumber, firstName, lastName, status);
+
+    public Student(String id, String userId, String code, String documentNumber, String firstName, String lastName, String status, String birthDate) {
+        super(id, userId, code, documentNumber, firstName, lastName, status);
         this.birthDate = birthDate;
     }
 
@@ -16,5 +18,19 @@ public class Student extends Person {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + getId() + '\'' +
+                ", userId='" + getUserId() + '\'' +
+                ", code='" + getCode() + '\'' +
+                ", documentNumber='" + getDocumentNumber() + '\'' +
+                ", firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", status='" + getStatus() + '\'' +
+                '}';
     }
 }
