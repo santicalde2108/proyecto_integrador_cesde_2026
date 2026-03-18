@@ -1,30 +1,30 @@
 package co.edu.cesde.ga.model;
 
 public class UserRole {
-    private String userId;
-    private String roleId;
+    private int userId;
+    private int roleId;
 
     public UserRole() {
     }
 
-    public UserRole(String userId, String roleId) {
+    public UserRole(int userId, int roleId) {
         this.userId = userId;
         this.roleId = roleId;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public String getRoleId() {
+    public int getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(String roleId) {
+    public void setRoleId(int roleId) {
         this.roleId = roleId;
     }
 

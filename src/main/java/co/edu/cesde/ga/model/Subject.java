@@ -1,16 +1,16 @@
 package co.edu.cesde.ga.model;
 
 public class Subject {
-    private String subjectId;
+    private Long subjectId;
     private String code;
     private String name;
-    private Integer credits;
-    private String programId;
+    private int credits;
+    private Long programId;
 
     public Subject() {
     }
 
-    public Subject(String subjectId, String code, String name, Integer credits, String programId) {
+    public Subject(Long subjectId, String code, String name, int credits, Long programId) {
         this.subjectId = subjectId;
         this.code = code;
         this.name = name;
@@ -18,11 +18,11 @@ public class Subject {
         this.programId = programId;
     }
 
-    public String getSubjectId() {
+    public Long getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(String subjectId) {
+    public void setSubjectId(Long subjectId) {
         this.subjectId = subjectId;
     }
 
@@ -42,7 +42,7 @@ public class Subject {
         this.name = name;
     }
 
-    public Integer getCredits() {
+    public int getCredits() {
         return credits;
     }
 
@@ -50,11 +50,11 @@ public class Subject {
         this.credits = credits;
     }
 
-    public String getProgramId() {
+    public Long getProgramId() {
         return programId;
     }
 
-    public void setProgramId(String programId) {
+    public void setProgramId(Long programId) {
         this.programId = programId;
     }
 

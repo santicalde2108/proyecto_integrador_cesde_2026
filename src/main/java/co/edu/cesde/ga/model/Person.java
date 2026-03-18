@@ -3,6 +3,7 @@ package co.edu.cesde.ga.model;
 public abstract class Person {
 
     private Long userId;
+    private String code;
     private String documentType;
     private String documentNumber;
     private String firstName;
@@ -27,6 +28,14 @@ public abstract class Person {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getDocumentType() {
@@ -73,6 +82,7 @@ public abstract class Person {
     public String toString() {
         return "Person{" +
                 "userId=" + userId +
+                ", code='" + code + '\'' +
                 ", documentType='" + documentType + '\'' +
                 ", documentNumber='" + documentNumber + '\'' +
                 ", firstName='" + firstName + '\'' +
@@ -81,4 +91,3 @@ public abstract class Person {
                 '}';
     }
 }
-

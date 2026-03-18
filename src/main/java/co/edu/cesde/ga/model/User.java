@@ -1,7 +1,7 @@
 package co.edu.cesde.ga.model;
 
 public class User {
-    private String userId;
+    private int userId;
     private String username;
     private String email;
     private String passwordHash;
@@ -11,7 +11,7 @@ public class User {
     public User() {
     }
 
-    public User(String userId, String username, String email, String passwordHash, String status, String createdAt) {
+    public User(int userId, String username, String email, String passwordHash, String status, String createdAt) {
         this.userId = userId;
         this.username = username;
         this.email = email;
@@ -20,11 +20,11 @@ public class User {
         this.createdAt = createdAt;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
