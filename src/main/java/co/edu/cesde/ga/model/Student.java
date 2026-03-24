@@ -32,7 +32,7 @@ public class Student extends Person {
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
+                "studentId=" + getStudentId() +
                 ", userId=" + getUserId() +
                 ", documentType='" + getDocumentType() + '\'' +
                 ", documentNumber='" + getDocumentNumber() + '\'' +
