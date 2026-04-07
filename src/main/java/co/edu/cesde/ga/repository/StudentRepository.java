@@ -15,7 +15,7 @@ public interface StudentRepository {
 
     boolean update(Student updatedStudent);
 
-    boolean delete(Long studentId);
+    Student delete(Long studentId);
 
     boolean existsByDocumentNumber(String documentNumber);
 

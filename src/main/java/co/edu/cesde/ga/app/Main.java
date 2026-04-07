@@ -1,74 +1,21 @@
 package co.edu.cesde.ga.app;
-import co.edu.cesde.ga.model.*;
-import co.edu.cesde.ga.model.GroupSubject;
+
+import co.edu.cesde.ga.model.Student;
+import co.edu.cesde.ga.repository.StudentRepository;
+import co.edu.cesde.ga.repository.impl.StudentRepositoryInMemory;
+import co.edu.cesde.ga.service.StudentService;
+import co.edu.cesde.ga.service.impl.StudentServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
 
-        Student student = new Student();
-        student.setUserId(12L);
-        student.setCode("123456");
-        student.setDocumentNumber("1036401402");
-        student.setFirstName("Santiago");
-        student.setLastName("Arenas");
-        student.setStatus("Active");
-        student.setBirthDate("05/06/1996");
-        System.out.println("Student Id: " + student.getUserId());
-        System.out.println("Student Code: " + student.getCode());
-        System.out.println("Student Document Number: " + student.getDocumentNumber());
-        System.out.println("First Name: " + student.getFirstName());
-        System.out.println("Last Name: " + student.getLastName());
-        System.out.println("Status: " + student.getStatus());
-        System.out.println("Birth Date: " + student.getBirthDate());
+        StudentRepository studentRepository = new StudentRepositoryInMemory();
+        StudentService studentService = (StudentService) new StudentServiceImpl(studentRepository);
 
-        Teacher teacher = new Teacher();
-        teacher.setUserId(1L);
-        teacher.setCode("123456");
-        teacher.setDocumentNumber("20202501");
-        teacher.setFirstName("Pedro");
-        teacher.setLastName("Ramirez");
-        teacher.setStatus("Active");
-        System.out.println("Teacher Id: " + teacher.getUserId());
-        System.out.println("Teacher Code: " + teacher.getCode());
-        System.out.println("Teacher Document Number: " + teacher.getDocumentNumber());
-        System.out.println("First Name: " + teacher.getFirstName());
-        System.out.println("Last Name: " + teacher.getLastName());
-        System.out.println("Status: " + teacher.getStatus());
-
-        Student student2 = new Student(2L, "23456", "15423969", "Banesa", "Quintero", "Active", "24/02/1996");
-
-        Subject subject = new Subject();
-        subject.setSubjectId(101L);
-        subject.setCode("MAT101");
-        subject.setName("Matemáticas");
-        subject.setCredits(3);
-        subject.setProgramId(101L);
-        System.out.println("Id de materia: " + subject.getSubjectId());
-        System.out.println("Codigo de materia: " + subject.getCode());
-        System.out.println("Nombre de materia: " + subject.getName());
-        System.out.println("Creditos: " + subject.getCredits());
-        System.out.println("Id de Programa: " + subject.getProgramId());
-
-        GroupSubject groupSubject = new GroupSubject();
-        groupSubject.setGroupSubjectId(101L);
-        groupSubject.setGroupId(1L);
-        groupSubject.setSubjectId(subject.getSubjectId());
-        groupSubject.setTeacherId(teacher.getUserId());
-        System.out.println("Id de asignacion de materia: " + groupSubject.getGroupSubjectId());
-        System.out.println("Group Id: " + groupSubject.getGroupId());
-        System.out.println("Subject Id: " + groupSubject.getSubjectId());
-        System.out.println("Teacher Id: " + groupSubject.getTeacherId());
-
-        Grade grade = new Grade();
-        grade.setGradeId(2L);
-        grade.setGroupSubjectId(groupSubject.getGroupSubjectId());
-        grade.setStudentId(student.getUserId());
-        grade.setFinalScore(4);
-        grade.setObservation("aprueba");
-        System.out.println("Id de notas: " + grade.getGradeId());
-        System.out.println("GroupSubject Id: " + grade.getGroupSubjectId());
-        System.out.println("Student Id: " + grade.getStudentId());
-        System.out.println("Calificación: " + grade.getFinalScore());
-        System.out.println("Observación: " + grade.getObservation());
+        Student student = new Student(studentId: null, userId: null, documentType: "S001" , documentNumber: "111122930" ,firstName: "Sebas", lastName: "Acevedo", status: "Activo", birthDate: "21-07-2000");
+        studentService.create(student);
+        System.out.println("");
     }
+
 }
+

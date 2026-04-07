@@ -73,11 +73,10 @@ public class StudentRepositoryInMemory implements StudentRepository {
     }
 
     @Override
-    public boolean delete(Long studentId) {
-        Student student = findById(studentId);
-        if (student == null) return false;
-        students.remove(student);
-        return true;
+    public Student delete(Long studentId) {
+       Student student = findById(studentId);
+        if (studentId == null || studentId <= 0L);
+        return student;
     }
 
     @Override
